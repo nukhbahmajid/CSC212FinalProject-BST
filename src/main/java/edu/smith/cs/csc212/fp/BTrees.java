@@ -30,7 +30,6 @@ public class BTrees<Key extends Comparable<Key>> {
 	
 	public int size() {
 		return size;
-		// adding a comment here
 	}
 	
 	public void add(Key key) {
