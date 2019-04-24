@@ -26,6 +26,7 @@ public class BTrees<Key extends Comparable<Key>> {
 	
 	public boolean isEmpty() {
 		return size() == 0;
+		// adding a comment 
 	}
 	
 	public int size() {
