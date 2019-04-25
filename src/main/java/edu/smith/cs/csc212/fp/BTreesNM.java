@@ -1,8 +1,12 @@
 package edu.smith.cs.csc212.fp;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.List;
 
-public class BTreesNM<Key extends Comparable<Key>, Value> {
+
+public class BTreesNM<Key extends Comparable<Key>> {
+	private Comparable key; 
 	/*
 	 * Minimum degree of the tree. 
 	 * t - the min degree of the B-Tree. 
@@ -18,7 +22,7 @@ public class BTreesNM<Key extends Comparable<Key>, Value> {
 	/*
 	 * The root of the B-tree.
 	 */
-	private Node root;
+	private Node<Key> root;
 	/*
 	 * The height of the B-Tree. 
 	 * All the leaves exist at this level. 
@@ -36,18 +40,15 @@ public class BTreesNM<Key extends Comparable<Key>, Value> {
 	}
 	
 	
-	private class Node{
+	private class Node<Key>{
 		/*
-		 * All the keys present in the node. Cannot exceed minTreeDeg. 
+		 * All the keys present in the node. Cannot exceed minTreeDeg. HOW TO MAKE THIS A FIXED ARRAY WHAAT
 		 */
-		List<Key> keys;
+		List<Key> keys = new ArrayList<>();
 		/*
 		 * The children from this node. Not less than t-1 ()
 		 */
-		List<Node> children;
-		
-		
-		
+		Node<Key>[] children = new Node[4];	
 		
 		
 	}
