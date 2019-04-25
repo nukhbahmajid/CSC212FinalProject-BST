@@ -58,7 +58,7 @@ public class BST {
 	}
 	
 	/*
-	 * In order traversal of the Binary Search Tree
+	 * In order traversal of the Binary Search Tree. 
 	 */
 	public List<Integer> inOrderTraversal(Node root) {
 		List<Integer> treeAsList = new ArrayList<>();

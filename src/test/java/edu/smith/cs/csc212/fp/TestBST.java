@@ -10,7 +10,7 @@ public class TestBST {
   
   /**
    * Make a new empty BST.
-   * @return an empty BST to be tested.
+   * @return an empty BST to be tested ~.
    */
   private BST makeEmptyBST() {
     BST empty = new BST();
