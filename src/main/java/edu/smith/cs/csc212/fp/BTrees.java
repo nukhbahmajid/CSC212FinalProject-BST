@@ -1,5 +1,6 @@
 package edu.smith.cs.csc212.fp;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class BTrees<Key extends Comparable<Key>> {
@@ -10,11 +11,11 @@ public class BTrees<Key extends Comparable<Key>> {
 	
 	public Node root;
 	
-	private class Node<T> {
+	public class Node {
 		//arrayList of nodes
-		Node[] children = new Node[3];
+		List<Node> children = new ArrayList<Node>();
 		//arrayList of keys
-		Key[] keys = new Key[2];
+		List<Key> keys = new ArrayList<Key>();
 		//number of children
 		public int numKeys;
 		//key in the node
@@ -22,18 +23,27 @@ public class BTrees<Key extends Comparable<Key>> {
 		//a list of keys in one node
 		//public List<String> keys;
 		
-		public Node() {
+		public boolean isLeaf() {
+			// return true if all children are null
+			
+		}
 		
+		public int numChildren() {
+			return numKeys + 1;
+		}
+		
+		public Node() {
+			
 		}
 	
 	}
 	
-	private static class Key {
-        private Comparable key;
-        public Key(Comparable key) {
-            this.key = key;
-        }
-    }
+//	private static class Key {
+//        private Comparable key;
+//        public Key(Comparable key) {
+//            this.key = key;
+//        }
+//    }
 	
 	public BTrees() {
 		root = new Node();
