@@ -8,25 +8,39 @@ public class BTrees<Key extends Comparable<Key>> {
 	//number of keys stored in nodes
 	public int size;
 	
-	private static class Node {
-		public Node root;
-		//number of nodes
-		Node[] children = new Node[4];
-		//number of keys in one node
+	public Node root;
+	
+	private class Node<T> {
+		//arrayList of nodes
+		Node[] children = new Node[3];
+		//arrayList of keys
+		Key[] keys = new Key[2];
+		//number of children
 		public int numKeys;
 		//key in the node
-		public String key;
+		//public String key;
 		//a list of keys in one node
-		public List<String> keys;
+		//public List<String> keys;
 		
-		public Node(int i) {
-			
-		}	
+		public Node() {
+		
+		}
+	
+	}
+	
+	private static class Key {
+        private Comparable key;
+        public Key(Comparable key) {
+            this.key = key;
+        }
+    }
+	
+	public BTrees() {
+		root = new Node();
 	}
 	
 	public boolean isEmpty() {
-		return size() == 0;
-		// adding a comment 
+		return size() == 0; 
 	}
 	
 	public int size() {
@@ -34,8 +48,14 @@ public class BTrees<Key extends Comparable<Key>> {
 	}
 	
 	public void add(Key key) {
-
+		if (this.isEmpty()) {
+			root.keys[0] = key;
+		}
+		
 	}
 	
+	public void split() {
+	// added a comment
+	}
 	
 }
