@@ -21,7 +21,7 @@ public class TestBST {
   
   /**
    * Make a sample BST.
-   * @return a sample BST to be tested.
+   * @return a sample BST to be tested
    */
   private BST makeSampleBST() {
 	  BST sample = new BST();

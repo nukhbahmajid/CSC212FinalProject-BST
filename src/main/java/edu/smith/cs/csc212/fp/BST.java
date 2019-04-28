@@ -183,7 +183,7 @@ public class BST {
 	}
 	
 	/**
-	 * Delete a node with the key in the BST.
+	 * Delete a node with the key in the BST
 	 */
 	public void deleteKey(int key) {
 		// This key does not exist in this BST
