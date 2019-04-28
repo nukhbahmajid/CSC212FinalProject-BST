@@ -2,9 +2,11 @@ package edu.smith.cs.csc212.fp;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Assert;
+import org.junit.Test;
 
 public class TestBST {
   
@@ -36,12 +38,25 @@ public class TestBST {
   @Test
   public void testInOrderTraversal() {
 	  BST sample = makeSampleBST();
-	  sample.inOrderTraversal(sample.root);
+	  System.out.println("Before: " + sample.traversalList);
 	  
-//	  for(int i : treeList) {
-//		  System.out.println(i);
-//	  }
+	  sample.orderedTraversal(sample.root);
 	  
+	  System.out.println("The size of list returned from the inOrderTraversal: " + sample.traversalList.size());
+	 
+	  
+  }
+  
+  
+  /*
+   * Test if the search method works: 
+   */
+  @Test
+  public void testSearchMethod() {
+	  BST sample = makeSampleBST();
+	  
+	  Assert.assertEquals(true, sample.searchKey(5));
+	  Assert.assertEquals(false, sample.searchKey(100));
   }
   
 }
