@@ -36,11 +36,11 @@ public class TestBST {
   @Test
   public void testInOrderTraversal() {
 	  BST sample = makeSampleBST();
-	  List<Integer> treeList = sample.inOrderTraversal(sample.root);
+	  sample.inOrderTraversal(sample.root);
 	  
-	  for(int i : treeList) {
-		  System.out.println(i);
-	  }
+//	  for(int i : treeList) {
+//		  System.out.println(i);
+//	  }
 	  
   }
   
