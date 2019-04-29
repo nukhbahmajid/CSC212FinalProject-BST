@@ -44,9 +44,6 @@ public class TestBinarySearchTree {
 	  Set<Integer> output = data.ListNodes(data.root);
 	  Integer[] expected = {50, 20, 70, 40, 10, 60, 30};
 	  Assert.assertArrayEquals(expected, output.toArray());
-//	  for (int i : output) {
-//		  System.out.println(i);
-//	  }
   }
   
   @Test
@@ -63,9 +60,6 @@ public class TestBinarySearchTree {
 	  Set<Integer> output = data.ListNodes(data.root);
 	  Integer[] expected = {70, 40, 10, 60};
 	  Assert.assertArrayEquals(expected, output.toArray());
-//	  for (int i : output) {
-//		  System.out.println(i);
-//	  }
   }
   
   @Test
