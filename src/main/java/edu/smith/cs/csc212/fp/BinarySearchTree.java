@@ -5,8 +5,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import edu.smith.cs.csc212.fp.BinarySearchTreeJH.Node;
-
 public class BinarySearchTree {
 	/**
 	 * number of nodes contained in Binary Search Tree
@@ -17,12 +15,7 @@ public class BinarySearchTree {
 	 * The root node - start of the binary search tree
 	 */
 	Node root;
-	
-	/**
-	 * a set of all nodes in the tree
-	 */
-	Set<Integer> listOfNodes;
-	
+
 	/**
 	 * the node in bst can have a maximum of two children and one key value stored
 	 * in it
@@ -62,7 +55,6 @@ public class BinarySearchTree {
 	 */
 	public BinarySearchTree() {
 		root = null;
-		this.listOfNodes = new HashSet<>();
 	}
 	
 	/**

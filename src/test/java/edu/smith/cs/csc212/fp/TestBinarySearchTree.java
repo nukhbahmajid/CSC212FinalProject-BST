@@ -38,30 +38,31 @@ public class TestBinarySearchTree {
 	  Assert.assertEquals(7, data.size());
   }
   
-  @SuppressWarnings("deprecation")
   @Test
   public void testListNodes() {
 	  BinarySearchTree data = makeData();
 	  Set<Integer> output = data.ListNodes(data.root);
 	  Integer[] expected = {50, 20, 70, 40, 10, 60, 30};
-	  Assert.assertEquals(expected, output.toArray());
+	  Assert.assertArrayEquals(expected, output.toArray());
 //	  for (int i : output) {
 //		  System.out.println(i);
 //	  }
   }
   
-  @SuppressWarnings("deprecation")
   @Test
   public void testRemove() {
 	  BinarySearchTree data = makeData();
 	  data.remove(30);
+	  Assert.assertEquals(6, data.size());
 	  data.remove(50);
+	  Assert.assertEquals(5, data.size());
 	  data.remove(20);
+	  Assert.assertEquals(4, data.size());
 	  data.remove(80);
 	  Assert.assertEquals(4, data.size());
 	  Set<Integer> output = data.ListNodes(data.root);
 	  Integer[] expected = {70, 40, 10, 60};
-	  Assert.assertEquals(expected, output.toArray());
+	  Assert.assertArrayEquals(expected, output.toArray());
 //	  for (int i : output) {
 //		  System.out.println(i);
 //	  }
@@ -96,6 +97,9 @@ public class TestBinarySearchTree {
   
   @Test
   public void testGetRoot() {
+	  BinarySearchTree empty = new BinarySearchTree();
+	  Assert.assertEquals(null, empty.getRoot());
+	  
 	  BinarySearchTree data = makeData();
 	  Assert.assertEquals((Integer)50, data.getRoot());
   }
