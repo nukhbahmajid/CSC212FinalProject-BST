@@ -117,7 +117,7 @@ public class BinarySearchTreeJH {
 		return true;
 	}
 	
-	public int findmin (Node root) {
+	public int findMin (Node root) {
 		Node currentNode = root;
 		
 		while (currentNode.leftchild != null) {
@@ -126,7 +126,7 @@ public class BinarySearchTreeJH {
 		return (currentNode.key);
 	}
 	
-	public int findmax (Node root) {
+	public int findMax (Node root) {
 		Node currentNode = root;
 		
 		while (currentNode.rightchild != null) {

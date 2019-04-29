@@ -35,13 +35,13 @@ public class TestBinarySearch {
 	  @Test
 	  public void testfindmin() {
 		  BinarySearchTreeJH tree = newBinaryTree();
-		  Assert.assertEquals(0, tree.findmin(tree.root));
+		  Assert.assertEquals(0, tree.findMin(tree.root));
 	  }
 	  
 	  @Test
 	  public void testfindmax() {
 		  BinarySearchTreeJH tree = newBinaryTree();
-		  Assert.assertEquals(5, tree.findmax(tree.root));
+		  Assert.assertEquals(5, tree.findMax(tree.root));
 	  }
 	  
 }
