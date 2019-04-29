@@ -1,2 +1,2 @@
-# CSC212FinalProject-BTrees
-CSC212 - Final Project: Implementation of B-trees 
+# CSC212FinalProject-BST
+CSC212 - Final Project: Implementation of Binary Search Tree
