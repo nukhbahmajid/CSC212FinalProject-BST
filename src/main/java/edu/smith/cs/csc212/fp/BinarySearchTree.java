@@ -68,7 +68,7 @@ public class BinarySearchTree {
 	/**
 	 * determine whether the node is a leaf node (doesn't have any children) or not
 	 * @param node - the node we want to know whether it's a leaf or not
-	 * @return
+	 * @return - the boolean if the node is a leaf or not
 	 */
 	public boolean isLeaf(Node node) {
 		return node.left == null && node.right == null;	

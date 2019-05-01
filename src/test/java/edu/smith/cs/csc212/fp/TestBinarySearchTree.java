@@ -24,6 +24,12 @@ public class TestBinarySearchTree {
 	}
   
   @Test
+  public void testIsEmpty() {
+	  BinarySearchTree empty = new BinarySearchTree();
+	  Assert.assertEquals(true, empty.isEmpty());
+  }
+  
+  @Test
   public void testInsert() {
 	  BinarySearchTree data = makeData();
 	  data.RecurInOrderTraversal(data.root);
